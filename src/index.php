@@ -5,7 +5,7 @@ require "./router/router.php";
 $router = new Router();
 
 $router->addRoute('GET', '/', function() {
-    echo "Página inicial";
+     include('./pages/a.php');
 });
 
 $router->addRoute('GET', '/about', function() {
