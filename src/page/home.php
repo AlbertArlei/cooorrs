@@ -1,1 +1,1 @@
-<?php echo include('../include/navBar.php');?>dskf
+<?php include_once('./page/navBar.php');?>
