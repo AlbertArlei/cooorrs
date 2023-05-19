@@ -28,16 +28,26 @@ function borderGenerator() {
     border-bottom:${borderBottom}px ${borderStyle} ${borderColorBottom};
     border-right:${borderRight}px ${borderStyle} ${borderColorRight};`;
 
-    document.querySelector('.textArea').value = `
-    border-top:${borderTop}px ${borderStyle} ${borderColorTop};
-    border-left:${borderLeft}px ${borderStyle} ${borderColorLeft};
-    border-bottom:${borderBottom}px ${borderStyle} ${borderColorBottom};
-    border-right:${borderRight}px ${borderStyle} ${borderColorRight};
-    border-radius: ${borderRadiusTop}px ${borderRadiusLeft}px ${borderRadiusBottom}px ${borderRadiusRight}px`.trimStart();
+    const code = `
+border-top:${borderTop}px ${borderStyle} ${borderColorTop};<br>
+border-left:${borderLeft}px ${borderStyle} ${borderColorLeft};<br>
+border-bottom:${borderBottom}px ${borderStyle} ${borderColorBottom};<br>
+border-right:${borderRight}px ${borderStyle} ${borderColorRight};<br>
+border-radius: ${borderRadiusTop}px ${borderRadiusLeft}px ${borderRadiusBottom}px ${borderRadiusRight}px
+`;
+
+document.querySelector('.textArea').innerHTML = code;
 }
 
 document.querySelector('.borderGeneratorContainer').addEventListener('click', ()=>{
     borderGenerator();
 });
+
+document.querySelector('.buttonCopyCss').addEventListener('click', ()=>{
+    const code = document.querySelector('.textArea');
+    console.log(code.textContent.trimStart())
+    navigator.clipboard.writeText(code.textContent.trimStart());
+    
+})
 
 borderGenerator();

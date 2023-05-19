@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&family=Roboto:wght@300;400;500;700&family=Teko&display=swap');
 
-:root{
+:root {
     --one-color: #000508;
     --two-color: #000508;
     --three-color: #0e0e0e;
@@ -11,7 +11,7 @@
     --font-teko: 'Teko';
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +20,21 @@
     font-family: var(--font-roboto);
 }
 
-body{
+body {
     background: linear-gradient(90deg, var(--one-color)60%, var(--two-color));
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: var(--three-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--five-color);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: var(--three-color);
 }

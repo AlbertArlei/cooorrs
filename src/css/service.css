@@ -1,0 +1,21 @@
+.servicesContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+.serviceLinkContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--three-color);
+    padding: 10px;
+    width: 60%;
+    height: 30px;
+}
+
+.serviceLinkContainer span{
+    color: var(--four-color);
+}

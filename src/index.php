@@ -8,7 +8,7 @@ $router->addRoute('GET', '/', function() {
     include('./page/home.php');
 });
 
-$router->addRoute('GET', '/service', function() {
+$router->addRoute('GET', '/services', function() {
     include('./page/service.php');
 });
 
@@ -17,7 +17,7 @@ $router->addRoute('GET', '/about', function() {
 });
 
 $router->addRoute('GET', '/border', function() {
-    include('./page/border.php');
+    include('./service/border.php');
 });
 
 $router->addRoute('GET', '/login', function() {
