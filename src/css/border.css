@@ -1,0 +1,135 @@
+.borderGeneratorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.propertiesContainer{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.viewPripertiesContainer{
+    width: 50%;
+}
+
+#colorSelectTop, #colorSelectLeft, #colorSelectBottom, #colorSelectRight{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    padding: 0;
+
+}
+
+.viewProperties{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--three-color);
+    width: 300px;
+    padding: 20px;
+    margin: 0px 0px 10px 0px;
+}
+
+.borderStyleContainer select{
+    border: 1px solid var(--five-color);
+    width: 70px;
+    height: 30px;
+    margin: 0px 0px 10px 0px;
+}
+
+.borderStyleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
+    background-color: var(--three-color);
+    align-items: center;
+    width: 110px;
+    padding: 0 0 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.borderTopContainer, .borderLeftContainer, .borderBottomContainer, .borderRightContainer{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 5px;
+    flex-wrap: wrap;
+    background-color: var(--three-color);
+    align-items: center;
+    width: 110px;
+    padding: 0 0 10px 0;
+    border-radius: 5px;
+}
+.borderTopContainer span, .borderLeftContainer span, .borderBottomContainer span, .borderRightContainer span, .borderStyleContainer span {
+    color: var(--four-color);
+    font-size: 1em;
+}
+
+.circleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--four-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.viewPripertiesContainer button{
+    background-color: var(--four-color);
+    width: 40%;
+    height: 40%;
+    border: none;
+}
+
+.viewPropertiesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.blockContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50px;
+    background-color: var(--four-color);
+}
+
+#borderTop, #borderLeft, #borderBottom, #borderRight, .borderRadiusContainer input, #borderRadiusTop, #borderRadiusLeft, #borderRadiusBottom, #borderRadiusRight{
+    border: 1px solid var(--five-color);
+    outline: none;
+    width: 40px;
+    height: 20px;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.textArea{
+    border: 1px solid var(--five-color);
+    width: 100%;
+    height: 90px;
+    resize: none;
+    outline: none;
+    padding: 5px;
+}
+
+.buttonCopyCss{
+    background-color: var(--four-color);
+    color: var(--three-color);
+    width: 80%;
+    height: 30px;
+    border: 1px solid var(--five-color);
+    font-weight: 600;
+}

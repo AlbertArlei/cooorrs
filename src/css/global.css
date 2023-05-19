@@ -1,4 +1,25 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&family=Roboto:wght@300;400;500;700&family=Teko&display=swap');
+
+:root{
+    --one-color: #000508;
+    --two-color: #000508;
+    --three-color: #0e0e0e;
+    --four-color: #f7f7f7;
+    --five-color: #00a6ff;
+    --six-color: #00a6ff;
+    --font-roboto: 'Roboto';
+    --font-teko: 'Teko';
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: var(--font-roboto);
+}
+
+body{
+    background: linear-gradient(90deg, var(--one-color)60%, var(--two-color));
+}

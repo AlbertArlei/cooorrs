@@ -8,16 +8,16 @@ $router->addRoute('GET', '/', function() {
     include('./page/home.php');
 });
 
-$router->addRoute('GET', '/services', function() {
-    include('./page/services.php');
+$router->addRoute('GET', '/service', function() {
+    include('./page/service.php');
 });
 
 $router->addRoute('GET', '/about', function() {
     include('./page/about');
 });
 
-$router->addRoute('GET', '/about', function() {
-    include('./pages/login');
+$router->addRoute('GET', '/border', function() {
+    include('./page/border.php');
 });
 
 $router->addRoute('GET', '/login', function() {
