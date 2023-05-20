@@ -54,11 +54,19 @@ border-radius: ${borderRadiusTop}px ${borderRadiusLeft}px ${borderRadiusBottom}p
     document.querySelector('.textArea').innerHTML = code;
 }
 
-document.querySelector('.borderGeneratorContainer').addEventListener('keyup', () => {
+document.querySelector('.borderGeneratorContainer').addEventListener('mousemove', () => {
     borderGenerator();
 });
 
 document.querySelector('.borderGeneratorContainer').addEventListener('click', () => {
+    borderGenerator();
+});
+
+// document.querySelector('.borderGeneratorContainer').addEventListener('', () => {
+//     borderGenerator();
+// });
+
+document.querySelector('.borderGeneratorContainer').addEventListener('touchmove', () => {
     borderGenerator();
 });
 

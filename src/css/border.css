@@ -64,20 +64,35 @@
 .borderRange {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    width: 100%;
+    gap: 5px;
 }
 
-.ratateLeft{
-    transform: rotate();
+.rotateLeft {
+    transform: rotate(90deg);
 }
 
+.rotateBottom {
+    transform: rotate(180deg);
+}
+
+.rotateRight {
+    transform: rotate(270deg);
+}
+
+
+
+#borderTopValue,
+#borderLeftValue,
+#borderBottomValue,
+#borderRightValue,
 #borderRadiusTopValue,
 #borderRadiusLeftValue,
 #borderRadiusBottomValue,
 #borderRadiusRightValue {
     color: var(--five-color);
-    width: 20px;
-    height: 20px;
+    width: 15.97px;
+    user-select: none;
 }
 
 .borderTopContainer,
@@ -86,12 +101,12 @@
 .borderRightContainer {
     display: flex;
     flex-direction: column;
-    width: 270px;
+    width: 280px;
     gap: 5px;
     flex-wrap: wrap;
     background-color: var(--three-color);
     align-items: center;
-    padding: 0 0 10px 0;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -102,6 +117,7 @@
 .borderStyleContainer span {
     color: var(--four-color);
     font-size: 1em;
+    user-select: none;
 }
 
 .circleContainer {
@@ -112,6 +128,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    user-select: none;
 }
 
 .viewPripertiesContainer button {
@@ -135,6 +152,7 @@
     width: 40%;
     height: 50px;
     background-color: var(--four-color);
+    user-select: none;
 }
 
 #borderTop,
@@ -162,6 +180,7 @@
     outline: none;
     padding: 5px;
     color: var(--five-color);
+    user-select: none;
 }
 
 .buttonCopyCss {
