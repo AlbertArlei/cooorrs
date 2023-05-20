@@ -13,7 +13,7 @@ function borderGenerator() {
     let borderColorLeft = document.querySelector('#colorSelectLeft').value;
     let borderColorBottom = document.querySelector('#colorSelectBottom').value;
     let borderColorRight = document.querySelector('#colorSelectRight').value;
-    let borderStyle= document.querySelector('#borderStyle').value;
+    let borderStyle = document.querySelector('#borderStyle').value;
 
     let blockContainer = document.querySelector('.blockContainer').style = `
     border-top:${borderTop}px ${borderStyle} ${borderColorTop};
@@ -36,18 +36,26 @@ border-right:${borderRight}px ${borderStyle} ${borderColorRight};<br>
 border-radius: ${borderRadiusTop}px ${borderRadiusLeft}px ${borderRadiusBottom}px ${borderRadiusRight}px
 `;
 
-document.querySelector('.textArea').innerHTML = code;
+    document.querySelector('.textArea').innerHTML = code;
 }
 
-document.querySelector('.borderGeneratorContainer').addEventListener('click', ()=>{
+document.querySelector('.borderGeneratorContainer').addEventListener('keyup', () => {
     borderGenerator();
 });
 
-document.querySelector('.buttonCopyCss').addEventListener('click', ()=>{
+document.querySelector('.borderGeneratorContainer').addEventListener('click', () => {
+    borderGenerator();
+});
+
+document.querySelector('.borderGeneratorContainer').addEventListener('touch', () => {
+    borderGenerator();
+});
+
+document.querySelector('.buttonCopyCss').addEventListener('click', () => {
     const code = document.querySelector('.textArea');
     console.log(code.textContent.trimStart())
     navigator.clipboard.writeText(code.textContent.trimStart());
-    
+
 })
 
 borderGenerator();

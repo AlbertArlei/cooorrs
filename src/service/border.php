@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/navBar.css">
-    <link rel="stylesheet" href="../css/border.css">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/navBar.css">
+    <link rel="stylesheet" href="./src/css/border.css">
     <title>Cooorrs</title>
 </head>
 
 <body>
     <div class="page">
-        <?php include('./include/navBar.php'); ?>
-
+        <?php include('./src/include/navBar.php');?>
         <div class="borderGeneratorContainer">
 
             <div class="propertiesContainer">
                 <div class="borderTopContainer">
                     <span>Border top</span>
                     <input id="colorSelectTop" type="color" value="#009dff">
-                    <input id="borderTop" type="text" value="2" placeholder="border-top">
-                    <input id="borderRadiusTop" type="text" value="0" placeholder="border-radius-top">
+                    <input id="borderTop" type="range" min="0" max="30" value="2">
+                    <input id="borderRadiusTop" type="range" min="0" max="50"  value="0">
                 </div>
                 <div class="borderLeftContainer">
                     <span>Border left</span>
                     <input id="colorSelectLeft" type="color" value="#009dff">
-                    <input id="borderLeft" type="text" value="2" placeholder="border-left">
-                    <input id="borderRadiusLeft" type="text" value="0" placeholder="border-radius-left">
+                    <input id="borderLeft" type="range" min="0" max="30"  value="2">
+                    <input id="borderRadiusLeft" type="range" min="0" max="50"  value="0">
                 </div>
                 <div class="borderBottomContainer">
                     <span>Border bottom</span>
                     <input id="colorSelectBottom" type="color" value="#009dff">
-                    <input id="borderBottom" type="text" value="2" placeholder="border-bottom">
-                    <input id="borderRadiusBottom" type="text" value="0" placeholder="border-radius-bottom">
+                    <input id="borderBottom" type="range" min="0" max="30"  value="2"m">
+                    <input id="borderRadiusBottom" type="range" min="0" max="50"  value="0">
                 </div>
                 <div class="borderRightContainer">
                     <span>Border right</span>
                     <input id="colorSelectRight" type="color" value="#009dff">
-                    <input id="borderRight" type="text" value="2" placeholder="border-right">
-                    <input id="borderRadiusRight" type="text" value="0" placeholder="border-radius-right">
+                    <input id="borderRight" type="range" min="0" max="30"  value="2"">
+                    <input id="borderRadiusRight" type="range" min="0" max="50" value="0">
                 </div>
 
                 <div class="borderStyleContainer">
@@ -73,9 +72,9 @@
 
 
         </div>
-        <?php include('./include/footer.php'); ?>
+        <?php include('./src/include/footer.php'); ?>
     </div>
-    <script src="../js/border.js" defer></script>
+    <script src="./src/js/border.js" defer></script>
 </body>
 
 </html>

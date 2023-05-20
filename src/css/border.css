@@ -67,12 +67,11 @@
 .borderRightContainer {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 250px;
     gap: 5px;
     flex-wrap: wrap;
     background-color: var(--three-color);
     align-items: center;
-    width: 110px;
     padding: 0 0 10px 0;
     border-radius: 5px;
 }
@@ -130,7 +129,7 @@
 #borderRadiusRight {
     border: 1px solid var(--five-color);
     outline: none;
-    width: 40px;
+    width: 230px;
     height: 20px;
     font-size: 1em;
     padding: 5px;
