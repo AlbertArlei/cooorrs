@@ -61,13 +61,32 @@
     text-align: center;
 }
 
+.borderRange {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.ratateLeft{
+    transform: rotate();
+}
+
+#borderRadiusTopValue,
+#borderRadiusLeftValue,
+#borderRadiusBottomValue,
+#borderRadiusRightValue {
+    color: var(--five-color);
+    width: 20px;
+    height: 20px;
+}
+
 .borderTopContainer,
 .borderLeftContainer,
 .borderBottomContainer,
 .borderRightContainer {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 270px;
     gap: 5px;
     flex-wrap: wrap;
     background-color: var(--three-color);
@@ -153,4 +172,9 @@
     border: none;
     font-weight: 600;
     cursor: pointer;
+    transition: 200ms;
+}
+
+.buttonCopyCss:hover {
+    background-color: var(--six-color);
 }

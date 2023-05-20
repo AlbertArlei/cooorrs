@@ -13,33 +13,68 @@
 
 <body>
     <div class="page">
-        <?php include('./src/include/navBar.php');?>
+        <?php include('./src/include/navBar.php'); ?>
         <div class="borderGeneratorContainer">
-
             <div class="propertiesContainer">
                 <div class="borderTopContainer">
                     <span>Border top</span>
                     <input id="colorSelectTop" type="color" value="#009dff">
-                    <input id="borderTop" type="range" min="0" max="30" value="2">
-                    <input id="borderRadiusTop" type="range" min="0" max="50"  value="0">
+                    <div class="borderRange">
+                        <span id="borderTopValue"></span>
+                        <input id="borderTop" type="range" min="0" max="30" value="2">
+                    </div>
+                    <div class="borderRange">
+                        <span id="borderRadiusTopValue"></span>
+                        <input id="borderRadiusTop" type="range" min="0" max="50" value="0">
+                        <span class="material-symbols-outlined rotatetop">
+                            border_style
+                        </span>
+                    </div>
                 </div>
                 <div class="borderLeftContainer">
                     <span>Border left</span>
                     <input id="colorSelectLeft" type="color" value="#009dff">
-                    <input id="borderLeft" type="range" min="0" max="30"  value="2">
-                    <input id="borderRadiusLeft" type="range" min="0" max="50"  value="0">
+                    <div class="borderRange">
+                        <span id="borderLeftValue"></span>
+                        <input id="borderLeft" type="range" min="0" max="30" value="2">
+                    </div>
+                    <div class="borderRange">
+                        <span id="borderRadiusLeftValue"></span>
+                        <input id="borderRadiusLeft" type="range" min="0" max="50" value="0">
+                        <span class="material-symbols-outlined rotateLeft">
+                            border_style
+                        </span>
+                    </div>
                 </div>
                 <div class="borderBottomContainer">
                     <span>Border bottom</span>
                     <input id="colorSelectBottom" type="color" value="#009dff">
-                    <input id="borderBottom" type="range" min="0" max="30"  value="2"m">
-                    <input id="borderRadiusBottom" type="range" min="0" max="50"  value="0">
+                    <div class="borderRange">
+                        <span id="borderBottomValue"></span>
+                        <input id="borderBottom" type="range" min="0" max="30" value="2">
+                    </div>
+                    <div class="borderRange">
+                        <span id="borderRadiusBottomValue"></span>
+                        <input id="borderRadiusBottom" type="range" min="0" max="50" value="0">
+                        <span class="material-symbols-outlined rotateBottom">
+                            border_style
+                        </span>
+                    </div>
                 </div>
                 <div class="borderRightContainer">
                     <span>Border right</span>
                     <input id="colorSelectRight" type="color" value="#009dff">
-                    <input id="borderRight" type="range" min="0" max="30"  value="2"">
-                    <input id="borderRadiusRight" type="range" min="0" max="50" value="0">
+                    <div class="borderRange">
+                        <span id="borderRightValue"></span>
+                        <input id="borderRight" type="range" min="0" max="30" value="2"">
+                    </div>
+                    <div class=" borderRange">
+                        <span id="borderRadiusRightValue"></span>
+                        <input id="borderRadiusRight" type="range" min="0" max="50" value="0">
+                        <span class="material-symbols-outlined rotateRight">
+                            border_style
+                        </span>
+                    </div>
                 </div>
 
                 <div class="borderStyleContainer">

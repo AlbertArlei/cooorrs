@@ -15,6 +15,21 @@ function borderGenerator() {
     let borderColorRight = document.querySelector('#colorSelectRight').value;
     let borderStyle = document.querySelector('#borderStyle').value;
 
+    // document.querySelector('#borderTopValue').textContent = borderTop;
+
+
+    // document.querySelector('#borderRadiusTopValue').textContent = borderRadiusTop;
+
+    document.querySelector('#borderTopValue').textContent = borderTop;
+    document.querySelector('#borderLeftValue').textContent = borderLeft;
+    document.querySelector('#borderBottomValue').textContent = borderBottom;
+    document.querySelector('#borderRightValue').textContent = borderRight;
+
+    document.querySelector('#borderRadiusTopValue').textContent = borderRadiusTop;
+    document.querySelector('#borderRadiusLeftValue').textContent = borderRadiusLeft;
+    document.querySelector('#borderRadiusBottomValue').textContent = borderRadiusBottom;
+    document.querySelector('#borderRadiusRightValue').textContent = borderRadiusRight;
+
     let blockContainer = document.querySelector('.blockContainer').style = `
     border-top:${borderTop}px ${borderStyle} ${borderColorTop};
     border-left:${borderLeft}px ${borderStyle} ${borderColorLeft};
@@ -44,10 +59,6 @@ document.querySelector('.borderGeneratorContainer').addEventListener('keyup', ()
 });
 
 document.querySelector('.borderGeneratorContainer').addEventListener('click', () => {
-    borderGenerator();
-});
-
-document.querySelector('.borderGeneratorContainer').addEventListener('touch', () => {
     borderGenerator();
 });
 

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&family=Roboto:wght@300;400;500;700&family=Teko&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 :root {
     --one-color: #000508;
     --two-color: #000508;
     --three-color: #0e0e0e;
     --four-color: #f7f7f7;
     --five-color: #00a6ff;
-    --six-color: #00a6ff;
+    --six-color: #1671a1;
     --font-roboto: 'Roboto';
     --font-teko: 'Teko';
 }
