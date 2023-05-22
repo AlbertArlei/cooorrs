@@ -20,6 +20,9 @@
                 <div class="container">
                     <div class="flexDirectionContainer">
                         <span class="flexItemText">flex-direction</span>
+                        <span class="material-symbols-outlined">
+question_mark
+</span>
                         <select name="flexDirection" id="flexDirection">
                             <option value="column">column</option>
                             <option value="row">row</option>
