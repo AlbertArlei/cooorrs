@@ -1,6 +1,12 @@
 
-function ()
-
+function question(){
+    let textItem = document.querySelectorAll('.flexItemText');
+    textItem.forEach(item =>{
+        console.log(item)
+        document.querySelector('.flexItemText').insertBefore(document.createElement('div'), document.querySelector('.flexItemText').childNodes[0])
+    })
+}
+question()
 function flexboxContainer() {
     let flexDirection = document.getElementById('flexDirection').value;
     let flexWrap = document.getElementById('flexWrap').value;
