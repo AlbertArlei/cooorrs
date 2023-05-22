@@ -20,9 +20,12 @@ $router->addRoute('GET', '/border', function() {
     include('./src/service/border.php');
 });
 
+$router->addRoute('GET', '/flexbox', function() {
+    include('./src/service/flexbox.php');
+});
+
 $router->addRoute('GET', '/login', function() {
     include('./src/pages/perfil');
 });
 
 $router->run($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
-?>

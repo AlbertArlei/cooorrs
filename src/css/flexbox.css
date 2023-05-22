@@ -1,0 +1,113 @@
+#flexboxContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.flexboxPropertiesEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.flexItemText {
+    color: var(--four-color);
+}
+
+.flexboxPropertiesEdit input{
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+.flexboxPropertiesEdit select{
+    outline: none;
+    border: none;
+}
+
+.flexDirectionContainer,
+.flexWrapContainer,
+.flexFlowContainer,
+.justifyContentContainer,
+.alignItemsContainer,
+.alignContentContainer,
+.gapContainer,
+.orderContainer,
+.flexGrowContainer,
+.flexShrinkContainer,
+.flexBasisContainer,
+.flexContainer,
+.alignSelfContainer {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: auto;
+    padding: 10px;
+    background-color: var(--three-color);
+}
+
+.container, .items{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#flexboxViewContainer {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    background: var(--three-color);
+}
+
+.controllerBox{
+    display: flex;
+    gap: 10px;
+}
+
+.generateButton{
+    background-color: var(--five-color);
+    border: none;
+    font-weight: 600;
+    width: 140px;
+    height: 30px;
+}
+
+#divBlockOne,
+#divBlockTwo,
+#divBlockThree,
+#divBlockFour,
+#divBlockFive {
+    width: 50px;
+    height: 50px;
+}
+
+#divBlockOne {
+    background-color: var(--five-color);
+}
+
+#divBlockTwo {
+    background-color: var(--four-color);
+    display: none;
+}
+
+#divBlockThree {
+    background-color: rgb(0, 24, 36);
+    display: none;
+}
+
+#divBlockFour {
+    background-color: rgb(0, 79, 116);
+    display: none;
+}
+
+#divBlockFive {
+    background-color: rgb(140, 219, 255);
+    display: none;
+}

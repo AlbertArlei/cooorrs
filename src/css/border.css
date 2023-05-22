@@ -6,6 +6,7 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
+    margin-top: 20px;
 }
 
 .propertiesContainer {
@@ -36,16 +37,16 @@
     align-items: center;
     justify-content: space-around;
     background-color: var(--three-color);
-    width: 300px;
+    width: 280px;
     padding: 20px;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
 }
 
 .borderStyleContainer select {
     border: 1px solid var(--five-color);
     width: 70px;
     height: 30px;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
 }
 
 .borderStyleContainer {
@@ -55,8 +56,9 @@
     flex-wrap: wrap;
     background-color: var(--three-color);
     align-items: center;
-    width: 110px;
-    padding: 0 0 10px 0;
+    width: 280px;
+    height: 124px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
 }
@@ -196,4 +198,10 @@
 
 .buttonCopyCss:hover {
     background-color: var(--six-color);
+}
+
+@media screen and (max-width: 650px){
+    .propertiesContainer{
+        justify-content: center;
+    }
 }
