@@ -1,12 +1,140 @@
 
-function question(){
-    let textItem = document.querySelectorAll('.flexItemText');
-    textItem.forEach(item =>{
-        console.log(item)
-        document.querySelector('.flexItemText').insertBefore(document.createElement('div'), document.querySelector('.flexItemText').childNodes[0])
+function question() {
+    let textItemAll = document.querySelectorAll('.flexItemText');
+    let i = 0;
+    textItemAll.forEach(item => {
+        const element = document.createElement('span');
+        element.id = 'question';
+        element.className = 'material-symbols-outlined';
+        element.textContent = 'question_mark';
+        textItemAll[i].insertBefore(element, textItemAll[i].childNodes[0]);
+        i++;
     })
 }
-question()
+
+let order = document.getElementById('order');
+let flexGrow = document.getElementById('flexGrow');
+let flexBasis = document.getElementById('flexBasis');
+let flexShrink = document.getElementById('flexShrink');
+let flex = document.getElementById('flex');
+let alignSelf = document.getElementById('alignSelf');
+
+const divOneObj = {
+    order: order.value,
+    flexGrow: flexGrow.value,
+    flexBasis: flexBasis.value,
+    flexShrink: flexShrink.value,
+    flex: flex.value,
+    alignSelf: alignSelf.value
+};
+
+const divTwoObj = {
+    order: order.value,
+    flexGrow: flexGrow.value,
+    flexBasis: flexBasis.value,
+    flexShrink: flexShrink.value,
+    flex: flex.value,
+    alignSelf: alignSelf.value
+};
+
+const divThreeObj = {
+    order: order.value,
+    flexGrow: flexGrow.value,
+    flexBasis: flexBasis.value,
+    flexShrink: flexShrink.value,
+    flex: flex.value,
+    alignSelf: alignSelf.value
+};
+
+const divFourObj = {
+    order: order.value,
+    flexGrow: flexGrow.value,
+    flexBasis: flexBasis.value,
+    flexShrink: flexShrink.value,
+    flex: flex.value,
+    alignSelf: alignSelf.value
+};
+
+const divFiveObj = {
+    order: order.value,
+    flexGrow: flexGrow.value,
+    flexBasis: flexBasis.value,
+    flexShrink: flexShrink.value,
+    flex: flex.value,
+    alignSelf: alignSelf.value
+};
+
+const divOne = document.getElementById('divBlockOne');
+const divTwo = document.getElementById('divBlockTwo');
+const divThree = document.getElementById('divBlockThree');
+const divFour = document.getElementById('divBlockFour');
+const divFive = document.getElementById('divBlockFive');
+
+let divBlock = 'divOne';
+
+document.getElementById('flexboxViewContainer').addEventListener('click', function divBlockEdit(e) {
+    const el = e.target;
+
+
+    if (el !== this) {
+        switch (el) {
+            case divOne:
+                order.value = divOneObj.order;
+                flexGrow.value = divOneObj.flexGrow;
+                flexBasis.value = divOneObj.flexBasis;
+                flexShrink.value = divOneObj.flexShrink;
+                flex.value = divOneObj.flex;
+                alignSelf.value = divOneObj.alignSelf;
+
+                divBlock = 'divOne';
+                break;
+            case divTwo:
+                order.value = divTwoObj.order;
+                flexGrow.value = divTwoObj.flexGrow;
+                flexBasis.value = divTwoObj.flexBasis;
+                flexShrink.value = divTwoObj.flexShrink;
+                flex.value = divTwoObj.flex;
+                alignSelf.value = divTwoObj.alignSelf;
+
+                divBlock = 'divTwo';
+                break;
+            case divThree:
+                order.value = divThreeObj.order;
+                flexGrow.value = divThreeObj.flexGrow;
+                flexBasis.value = divThreeObj.flexBasis;
+                flexShrink.value = divThreeObj.flexShrink;
+                flex.value = divThreeObj.flex;
+                alignSelf.value = divThreeObj.alignSelf;
+
+                divBlock = 'divThree';
+                break;
+
+            case divFour:
+                order.value = divFourObj.order;
+                flexGrow.value = divFourObj.flexGrow;
+                flexBasis.value = divFourObj.flexBasis;
+                flexShrink.value = divFourObj.flexShrink;
+                flex.value = divFourObj.flex;
+                alignSelf.value = divFourObj.alignSelf;
+
+                divBlock = 'divFour';
+                break;
+            case divFive:
+                order.value = divFiveObj.order;
+                flexGrow.value = divFiveObj.flexGrow;
+                flexBasis.value = divFiveObj.flexBasis;
+                flexShrink.value = divFiveObj.flexShrink;
+                flex.value = divFiveObj.flex;
+                alignSelf.value = divFiveObj.alignSelf;
+
+                divBlock = 'divFive';
+                break;
+        }
+    }
+
+    return;
+});
+
 function flexboxContainer() {
     let flexDirection = document.getElementById('flexDirection').value;
     let flexWrap = document.getElementById('flexWrap').value;
@@ -30,20 +158,118 @@ function flexboxContainer() {
     return;
 }
 
-function flexboxItems() {
-    let order = document.getElementById('order').value;
-    let flexGrow = document.getElementById('flexGrow').value;
-    let flexBasis = document.getElementById('flexBasis').value;
-    let flexShrink = document.getElementById('flexShrink').value;
-    let flex = document.getElementById('flex').value;
-    let alignSelf = document.getElementById('alignSelf').value;
-}
+
+
+document.getElementById('setContent').addEventListener('click', function setObjetctContent(e) {
+    let code = '';
+    switch (divBlock) {
+        case 'divOne':
+            console.log('a')
+            console.log(divBlock)
+            divOneObj.order = order.value;
+            divOneObj.flexGrow = flexGrow.value;
+            divOneObj.flexBasis = flexBasis.value;
+            divOneObj.flexShrink = flexShrink.value;
+            divOneObj.flex = flex.value;
+            divOneObj.alignSelf = alignSelf.value;
+            
+            if(order.value.trim() !== '') code += `order: ${divOneObj.order};`;
+            if(flexGrow.value.trim() !== '') code += `flex-grow: ${divOneObj.flexGrow};`;
+            if(flexBasis.value.trim() !== '') code += `flex-basis: ${divOneObj.flexBasis};`;
+            if(flexShrink.value.trim() !== '') code += `flex-shrink: ${divOneObj.flexShrink};`;
+            if(flex.value.trim() !== '') code += `flex: ${divOneObj.flex};`;
+            if(alignSelf.value !== 'unset') code += `align-self: ${divOneObj.alignSelf};`;
+
+            divOne.style = code;
+            break;
+        case 'divTwo':
+            console.log('b')
+            console.log(divBlock)
+            divTwoObj.order = order.value;
+            divTwoObj.flexGrow = flexGrow.value;
+            divTwoObj.flexBasis = flexBasis.value;
+            divTwoObj.flexShrink = flexShrink.value;
+            divTwoObj.flex = flex.value;
+            divTwoObj.alignSelf = alignSelf.value;
+
+            
+            if(order.value.trim() !== '') code += `order: ${divTwoObj.order};`;
+            if(flexGrow.value.trim() !== '') code += `flex-grow: ${divTwoObj.flexGrow};`;
+            if(flexBasis.value.trim() !== '') code += `flex-basis: ${divTwoObj.flexBasis};`;
+            if(flexShrink.value.trim() !== '') code += `flex-shrink: ${divTwoObj.flexShrink};`;
+            if(flex.value.trim() !== '') code += `flex: ${divTwoObj.flex};`;
+            if(alignSelf.value !== 'unset') code += `align-self: ${divTwoObj.alignSelf};`;
+
+            divTwo.style = code;
+            break;
+        case 'divThree':
+            console.log('c')
+            console.log(divBlock)
+            divThreeObj.order = order.value;
+            divThreeObj.flexGrow = flexGrow.value;
+            divThreeObj.flexBasis = flexBasis.value;
+            divThreeObj.flexShrink = flexShrink.value;
+            divThreeObj.flex = flex.value;
+            divThreeObj.alignSelf = alignSelf.value;
+
+            
+            if(order.value.trim() !== '') code += `order: ${divThreeObj.order};`;
+            if(flexGrow.value.trim() !== '') code += `flex-grow: ${divThreeObj.flexGrow};`;
+            if(flexBasis.value.trim() !== '') code += `flex-basis: ${divThreeObj.flexBasis};`;
+            if(flexShrink.value.trim() !== '') code += `flex-shrink: ${divThreeObj.flexShrink};`;
+            if(flex.value.trim() !== '') code += `flex: ${divThreeObj.flex};`;
+            if(alignSelf.value !== 'unset') code += `align-self: ${divThreeObj.alignSelf};`;
+
+            divThree.style = code;
+            break;
+        case 'divFour':
+            console.log('d')
+            console.log(divBlock)
+            divFourObj.order = order.value;
+            divFourObj.flexGrow = flexGrow.value;
+            divFourObj.flexBasis = flexBasis.value;
+            divFourObj.flexShrink = flexShrink.value;
+            divFourObj.flex = flex.value;
+            divFourObj.alignSelf = alignSelf.value;
+
+            
+            if(order.value.trim() !== '') code += `order: ${divFourObj.order};`;
+            if(flexGrow.value.trim() !== '') code += `flex-grow: ${divFourObj.flexGrow};`;
+            if(flexBasis.value.trim() !== '') code += `flex-basis: ${divFourObj.flexBasis};`;
+            if(flexShrink.value.trim() !== '') code += `flex-shrink: ${divFourObj.flexShrink};`;
+            if(flex.value.trim() !== '') code += `flex: ${divFourObj.flex};`;
+            if(alignSelf.value !== 'unset') code += `align-self: ${divFourObj.alignSelf};`;
+
+            divFour.style = code;
+            break;
+        case 'divFive':
+            console.log('e')
+            console.log(divBlock)
+            divFiveObj.order = order.value;
+            divFiveObj.flexGrow = flexGrow.value;
+            divFiveObj.flexBasis = flexBasis.value;
+            divFiveObj.flexShrink = flexShrink.value;
+            divFiveObj.flex = flex.value;
+            divFiveObj.alignSelf = alignSelf.value;
+
+            
+            if(order.value.trim() !== '') code += `order: ${divFiveObj.order};`;
+            if(flexGrow.value.trim() !== '') code += `flex-grow: ${divFiveObj.flexGrow};`;
+            if(flexBasis.value.trim() !== '') code += `flex-basis: ${divFiveObj.flexBasis};`;
+            if(flexShrink.value.trim() !== '') code += `flex-shrink: ${divFiveObj.flexShrink};`;
+            if(flex.value.trim() !== '') code += `flex: ${divFiveObj.flex};`;
+            if(alignSelf.value !== 'unset') code += `align-self: ${divFiveObj.alignSelf};`;
+
+            divFive.style = code;
+            break;
+    }
+});
 
 function addDivBlock() {
     let range = document.getElementById('addDivBlock').value;
 
     switch (range) {
-        
+
         case '1':
             document.getElementById('divBlockTwo').style.display = 'none';
             document.getElementById('divBlockThree').style.display = 'none';
@@ -77,6 +303,10 @@ function addDivBlock() {
     }
 }
 
+document.getElementById('flexboxViewContainer').addEventListener('click', ()=>{
+
+});
+
 document.getElementById('flexboxContainer').addEventListener('click', () => {
     flexboxContainer();
     addDivBlock();
@@ -85,12 +315,17 @@ document.getElementById('flexboxContainer').addEventListener('click', () => {
 document.getElementById('flexboxContainer').addEventListener('mousemove', () => {
     flexboxContainer();
     addDivBlock();
-})
+});
 
 document.getElementById('flexboxContainer').addEventListener('keyup', () => {
     flexboxContainer();
-    addDivBlock();  
-})
+    addDivBlock();
+});
+
+document.getElementById('flexboxContainer').addEventListener('touchmove', () => {
+    flexboxContainer();
+    addDivBlock();
+});
 
 flexboxContainer();
-flexboxItems();
+question();
