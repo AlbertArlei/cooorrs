@@ -17,6 +17,18 @@
 
         <div id="flexboxContainer">
             <div class="flexboxPropertiesEdit">
+            <div class="controllerBox">
+                    <span id="addDivBlockValue"></span>
+                    <input id="addDivBlock" type="range" min="1" max="5" value="1">
+                </div>
+
+                <div id="flexboxViewContainer">
+                    <div id="divBlockOne"></div>
+                    <div id="divBlockTwo"></div>
+                    <div id="divBlockThree"></div>
+                    <div id="divBlockFour"></div>
+                    <div id="divBlockFive"></div>
+                </div>
                 <span>container</span>
                 <div class="container">
 
@@ -229,21 +241,13 @@
                     <button id="setContent">set</button>
                 </div>
             </div>
-            <div class="controllerBox">
-                <span id="addDivBlockValue"></span>
-                <input id="addDivBlock" type="range" min="1" max="5" value="1">
-            </div>
-            <div id="flexboxViewContainer">
-                <div id="divBlockOne"></div>
-                <div id="divBlockTwo"></div>
-                <div id="divBlockThree"></div>
-                <div id="divBlockFour"></div>
-                <div id="divBlockFive"></div>
+            <div id="codeBox">
+                <span id="codeText"></span>
             </div>
             <button id="generateButton">generate</button>
         </div>
 
-        <?php include('./src/include/footer.php'); ?>
+        <?php include('./src/include/footer.php');?>
     </div>
     <script src="./src/js/flexbox.js"></script>
 </body>

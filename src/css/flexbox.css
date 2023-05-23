@@ -14,16 +14,14 @@
     align-items: center;
     width: 100%;
     gap: 20px;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 #itensContainer{
-    border: 1px solid var(--five-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 10px;
 }
 
 .flexItemText{
@@ -38,8 +36,7 @@
     cursor: pointer;
 }
 
-.flexItemText[data-tooltip]:before,
-.flexItemText[data-tooltip]:after {
+.flexItemText[data-tooltip]:before{
   visibility: hidden;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -122,11 +119,14 @@
 }
 
 #flexboxViewContainer {
+    position: sticky;
+    top: 0  ;
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 250px;
     padding: 10px;
     background: var(--three-color);
+    z-index: 10;
 }
 
 .controllerBox {

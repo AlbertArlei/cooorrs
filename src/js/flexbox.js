@@ -1,3 +1,11 @@
+let codeDivOne = '';
+let codeDivTwo = '';
+let codeDivThree = '';
+let codeDivFour = '';
+let codeDivFive = '';
+let codeContainerFlex = '';
+
+
 
 function question() {
     let textItemAll = document.querySelectorAll('.flexItemText');
@@ -164,8 +172,6 @@ document.getElementById('setContent').addEventListener('click', function setObje
     let code = '';
     switch (divBlock) {
         case 'divOne':
-            console.log('a')
-            console.log(divBlock)
             divOneObj.order = order.value;
             divOneObj.flexGrow = flexGrow.value;
             divOneObj.flexBasis = flexBasis.value;
@@ -181,10 +187,9 @@ document.getElementById('setContent').addEventListener('click', function setObje
             if(alignSelf.value !== 'unset') code += `align-self: ${divOneObj.alignSelf};`;
 
             divOne.style = code;
+            codeDivOne = `.blockOne{order:${order.value}; flex-grow: ${flex};}`;
             break;
         case 'divTwo':
-            console.log('b')
-            console.log(divBlock)
             divTwoObj.order = order.value;
             divTwoObj.flexGrow = flexGrow.value;
             divTwoObj.flexBasis = flexBasis.value;
@@ -203,8 +208,6 @@ document.getElementById('setContent').addEventListener('click', function setObje
             divTwo.style = code;
             break;
         case 'divThree':
-            console.log('c')
-            console.log(divBlock)
             divThreeObj.order = order.value;
             divThreeObj.flexGrow = flexGrow.value;
             divThreeObj.flexBasis = flexBasis.value;
@@ -223,8 +226,6 @@ document.getElementById('setContent').addEventListener('click', function setObje
             divThree.style = code;
             break;
         case 'divFour':
-            console.log('d')
-            console.log(divBlock)
             divFourObj.order = order.value;
             divFourObj.flexGrow = flexGrow.value;
             divFourObj.flexBasis = flexBasis.value;
@@ -243,8 +244,6 @@ document.getElementById('setContent').addEventListener('click', function setObje
             divFour.style = code;
             break;
         case 'divFive':
-            console.log('e')
-            console.log(divBlock)
             divFiveObj.order = order.value;
             divFiveObj.flexGrow = flexGrow.value;
             divFiveObj.flexBasis = flexBasis.value;
