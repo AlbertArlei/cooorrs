@@ -72,7 +72,6 @@ document.querySelector('.borderGeneratorContainer').addEventListener('touchmove'
 
 document.querySelector('.buttonCopyCss').addEventListener('click', () => {
     const code = document.querySelector('.textArea');
-    console.log(code.textContent.trimStart())
     navigator.clipboard.writeText(code.textContent.trimStart());
 
 })

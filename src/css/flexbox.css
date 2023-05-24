@@ -8,10 +8,12 @@
     gap: 10px;
 }
 
-.flexboxPropertiesEdit {
+#spanTitleContainer, #spanTitleContent{
+    color: var(--five-color);
+}
+
+#flexboxPropertiesEdit {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     gap: 20px;
     margin-top: 10px;
@@ -19,9 +21,12 @@
 
 #itensContainer{
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding-bottom: 10px;
+    color: var(--four-color);
 }
 
 .flexItemText{
@@ -32,7 +37,7 @@
 
 .flexItemText[data-tooltip]{
     position: relative;
-    z-index: 2;
+    z-index: 11;
     cursor: pointer;
 }
 
@@ -74,34 +79,30 @@
   opacity: 1;
 }
 
-.flexboxPropertiesEdit span {
-    color: var(--four-color);
-}
-
-.flexboxPropertiesEdit input {
+#flexboxPropertiesEdit input {
     padding: 5px;
     outline: none;
     border: none;
 }
 
-.flexboxPropertiesEdit select {
+#flexboxPropertiesEdit select {
     outline: none;
     border: none;
 }
 
-.flexDirectionContainer,
-.flexWrapContainer,
-.flexFlowContainer,
-.justifyContentContainer,
-.alignItemsContainer,
-.alignContentContainer,
-.gapContainer,
-.orderContainer,
-.flexGrowContainer,
-.flexShrinkContainer,
-.flexBasisContainer,
-.flexContainer,
-.alignSelfContainer {
+#flexDirectionContainer,
+#flexWrapContainer,
+#flexFlowContainer,
+#justifyContentContainer,
+#alignItemsContainer,
+#alignContentContainer,
+#gapContainer,
+#orderContainer,
+#flexGrowContainer,
+#flexShrinkContainer,
+#flexBasisContainer,
+#flexContainer,
+#alignSelfContainer {
     display: flex;
     flex-direction: column;
     width: 150px;
@@ -110,7 +111,15 @@
     background-color: var(--three-color);
 }
 
-.container,
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--four-color);
+}
+
+.boxContainer,
 .items {
     display: flex;
     justify-content: center;
@@ -119,22 +128,19 @@
 }
 
 #flexboxViewContainer {
-    position: sticky;
-    top: 0  ;
     display: flex;
     width: 100%;
     height: 250px;
     padding: 10px;
     background: var(--three-color);
-    z-index: 10;
 }
 
-.controllerBox {
+#controllerBox {
     display: flex;
     gap: 10px;
 }
 
-#generateButton, #setContent {
+#copyButton, #setContent {
     background-color: var(--five-color);
     border: none;
     font-weight: 600;
@@ -144,6 +150,13 @@
     transition: 200ms;
 }
 
+#codeBox{
+    border: 1px solid var(--five-color);
+    width: 280px;
+    min-height: 40px;
+    height: auto;
+    color: var(--five-color);
+}
 
 #generateButton:hover, #setContent:hover{
     background-color: var(--six-color);
@@ -194,4 +207,13 @@
 #divBlockFive {
     background-color: rgb(140, 219, 255);
     display: none;
+}
+
+
+
+@media screen and (max-width: 350px) {
+    #flexboxPropertiesEdit{
+        flex-direction: column;
+    }
+    
 }

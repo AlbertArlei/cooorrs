@@ -22,6 +22,7 @@
 
 body {
     background: linear-gradient(90deg, var(--one-color)60%, var(--two-color));
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
