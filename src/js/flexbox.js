@@ -25,7 +25,7 @@ let order = document.getElementById('order');
 let flexGrow = document.getElementById('flexGrow');
 let flexBasis = document.getElementById('flexBasis');
 let flexShrink = document.getElementById('flexShrink');
-let flex = document.getElementById('flex');
+// let flex = document.getElementById('flex');
 let alignSelf = document.getElementById('alignSelf');
 
 const divOneObj = {
@@ -33,7 +33,7 @@ const divOneObj = {
     flexGrow: flexGrow.value,
     flexBasis: flexBasis.value,
     flexShrink: flexShrink.value,
-    flex: flex.value,
+    // flex: flex.value,
     alignSelf: alignSelf.value
 };
 
@@ -42,7 +42,7 @@ const divTwoObj = {
     flexGrow: flexGrow.value,
     flexBasis: flexBasis.value,
     flexShrink: flexShrink.value,
-    flex: flex.value,
+    // flex: flex.value,
     alignSelf: alignSelf.value
 };
 
@@ -51,7 +51,7 @@ const divThreeObj = {
     flexGrow: flexGrow.value,
     flexBasis: flexBasis.value,
     flexShrink: flexShrink.value,
-    flex: flex.value,
+    // flex: flex.value,
     alignSelf: alignSelf.value
 };
 
@@ -60,7 +60,7 @@ const divFourObj = {
     flexGrow: flexGrow.value,
     flexBasis: flexBasis.value,
     flexShrink: flexShrink.value,
-    flex: flex.value,
+    // flex: flex.value,
     alignSelf: alignSelf.value
 };
 
@@ -69,7 +69,7 @@ const divFiveObj = {
     flexGrow: flexGrow.value,
     flexBasis: flexBasis.value,
     flexShrink: flexShrink.value,
-    flex: flex.value,
+    // flex: flex.value,
     alignSelf: alignSelf.value
 };
 
@@ -92,7 +92,7 @@ document.getElementById('flexboxViewContainer').addEventListener('click', functi
                 flexGrow.value = divOneObj.flexGrow;
                 flexBasis.value = divOneObj.flexBasis;
                 flexShrink.value = divOneObj.flexShrink;
-                flex.value = divOneObj.flex;
+                // flex.value = divOneObj.flex;
                 alignSelf.value = divOneObj.alignSelf;
 
                 divBlock = 'divOne';
@@ -102,7 +102,7 @@ document.getElementById('flexboxViewContainer').addEventListener('click', functi
                 flexGrow.value = divTwoObj.flexGrow;
                 flexBasis.value = divTwoObj.flexBasis;
                 flexShrink.value = divTwoObj.flexShrink;
-                flex.value = divTwoObj.flex;
+                // flex.value = divTwoObj.flex;
                 alignSelf.value = divTwoObj.alignSelf;
 
                 divBlock = 'divTwo';
@@ -112,7 +112,7 @@ document.getElementById('flexboxViewContainer').addEventListener('click', functi
                 flexGrow.value = divThreeObj.flexGrow;
                 flexBasis.value = divThreeObj.flexBasis;
                 flexShrink.value = divThreeObj.flexShrink;
-                flex.value = divThreeObj.flex;
+                // flex.value = divThreeObj.flex;
                 alignSelf.value = divThreeObj.alignSelf;
 
                 divBlock = 'divThree';
@@ -123,7 +123,7 @@ document.getElementById('flexboxViewContainer').addEventListener('click', functi
                 flexGrow.value = divFourObj.flexGrow;
                 flexBasis.value = divFourObj.flexBasis;
                 flexShrink.value = divFourObj.flexShrink;
-                flex.value = divFourObj.flex;
+                // flex.value = divFourObj.flex;
                 alignSelf.value = divFourObj.alignSelf;
 
                 divBlock = 'divFour';
@@ -133,7 +133,7 @@ document.getElementById('flexboxViewContainer').addEventListener('click', functi
                 flexGrow.value = divFiveObj.flexGrow;
                 flexBasis.value = divFiveObj.flexBasis;
                 flexShrink.value = divFiveObj.flexShrink;
-                flex.value = divFiveObj.flex;
+                // flex.value = divFiveObj.flex;
                 alignSelf.value = divFiveObj.alignSelf;
 
                 divBlock = 'divFive';
@@ -200,7 +200,7 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
             divOneObj.flexGrow = flexGrow.value;
             divOneObj.flexBasis = flexBasis.value;
             divOneObj.flexShrink = flexShrink.value;
-            divOneObj.flex = flex.value;
+            // divOneObj.flex = flex.value;
             divOneObj.alignSelf = alignSelf.value;
 
             if (order.value.trim() !== '') {
@@ -220,10 +220,10 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
                 code += `flex-shrink: ${divOneObj.flexShrink};`;
                 codeDivOne += `\nlex-shrink:${flexShrink.value};`;
             }
-            if (flex.value.trim() !== '') {
-                code += `flex: ${divOneObj.flex};`;
-                codeDivOne += `\nlex:${flex.value};`;
-            }
+            // if (flex.value.trim() !== '') {
+            //     code += `flex: ${divOneObj.flex};`;
+            //     codeDivOne += `\nlex:${flex.value};`;
+            // }
             if (alignSelf.value !== 'unset') {
                 code += `align-self: ${divOneObj.alignSelf};`;
                 codeDivOne += `\nlign-self:${alignSelf.value};`;
@@ -238,7 +238,7 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
             divTwoObj.flexGrow = flexGrow.value;
             divTwoObj.flexBasis = flexBasis.value;
             divTwoObj.flexShrink = flexShrink.value;
-            divTwoObj.flex = flex.value;
+            // divTwoObj.flex = flex.value;
             divTwoObj.alignSelf = alignSelf.value;
 
 
@@ -258,10 +258,10 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
                 code += `flex-shrink: ${divTwoObj.flexShrink};`;
                 codeDivTwo += `\nflex-shrink:${flexShrink.value};`;
             }
-            if (flex.value.trim() !== '') {
-                code += `flex: ${divTwoObj.flex};`;
-                codeDivTwo += `\nflex:${flex.value};`;
-            }
+            // if (flex.value.trim() !== '') {
+            //     code += `flex: ${divTwoObj.flex};`;
+            //     codeDivTwo += `\nflex:${flex.value};`;
+            // }
             if (alignSelf.value !== 'unset') {
                 code += `align-self: ${divTwoObj.alignSelf};`;
                 codeDivTwo += `\nalign-self:${alignSelf.value};`;
@@ -275,7 +275,7 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
             divThreeObj.flexGrow = flexGrow.value;
             divThreeObj.flexBasis = flexBasis.value;
             divThreeObj.flexShrink = flexShrink.value;
-            divThreeObj.flex = flex.value;
+            // divThreeObj.flex = flex.value;
             divThreeObj.alignSelf = alignSelf.value;
 
 
@@ -295,10 +295,10 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
                 code += `flex-shrink: ${divThreeObj.flexShrink};`;
                 codeDivThree += `\nflex-shrink:${flexShrink.value};`;
             }
-            if (flex.value.trim() !== '') {
-                code += `flex: ${divThreeObj.flex};`;
-                codeDivThree += `\nflex:${flex.value};`;
-            }
+            // if (flex.value.trim() !== '') {
+            //     code += `flex: ${divThreeObj.flex};`;
+            //     codeDivThree += `\nflex:${flex.value};`;
+            // }
             if (alignSelf.value !== 'unset') {
                 code += `align-self: ${divThreeObj.alignSelf};`;
                 codeDivThree += `\nalign-self:${alignSelf.value};`;
@@ -312,7 +312,7 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
             divFourObj.flexGrow = flexGrow.value;
             divFourObj.flexBasis = flexBasis.value;
             divFourObj.flexShrink = flexShrink.value;
-            divFourObj.flex = flex.value;
+            //divFourObj.flex = flex.value;
             divFourObj.alignSelf = alignSelf.value;
 
 
@@ -332,10 +332,10 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
                 code += `flex-shrink: ${divFourObj.flexShrink};`;
                 codeDivFour += `\nflex-shrink:${flexShrink.value};`;
             }
-            if (flex.value.trim() !== '') {
-                code += `flex: ${divFourObj.flex};`;
-                codeDivFour += `\nflex:${flex.value};`;
-            }
+            // if (flex.value.trim() !== '') {
+            //     code += `flex: ${divFourObj.flex};`;
+            //     codeDivFour += `\nflex:${flex.value};`;
+            // }
             if (alignSelf.value !== 'unset') {
                 code += `align-self: ${divFourObj.alignSelf};`;
                 codeDivFour += `\nalign-self:${alignSelf.value};`;
@@ -350,7 +350,7 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
             divFiveObj.flexGrow = flexGrow.value;
             divFiveObj.flexBasis = flexBasis.value;
             divFiveObj.flexShrink = flexShrink.value;
-            divFiveObj.flex = flex.value;
+            // divFiveObj.flex = flex.value;
             divFiveObj.alignSelf = alignSelf.value;
 
 
@@ -370,10 +370,10 @@ document.getElementById('setContent').addEventListener('click', (e)=>{
                 code += `flex-shrink: ${divFiveObj.flexShrink};`;
                 codeDivFive += `\nflex-shrink:${flexShrink.value};`;
             }
-            if (flex.value.trim() !== '') {
-                code += `flex: ${divFiveObj.flex};`;
-                codeDivFive += `\nflex:${flex.value};`;
-            }
+            // if (flex.value.trim() !== '') {
+            //     code += `flex: ${divFiveObj.flex};`;
+            //     codeDivFive += `\nflex:${flex.value};`;
+            // }
             if (alignSelf.value !== 'unset') {
                 code += `align-self: ${divFiveObj.alignSelf};`;
                 codeDivFive += `\nalign-self:${alignSelf.value};`;

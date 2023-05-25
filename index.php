@@ -25,7 +25,7 @@ $router->addRoute('GET', '/flexbox', function() {
 });
 
 $router->addRoute('GET', '/login', function() {
-    include('./src/pages/perfil');
+    include('./src/service/login.php');
 });
 
 $router->run($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);

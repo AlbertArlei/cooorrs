@@ -99,6 +99,7 @@
                             Ela controla como os itens são posicionados verticalmente em relação ao eixo transversal do
                             contêiner.">align-Items</span>
                             <select name="alignItems" id="alignItems">
+                            <option value="center">center</option>
                                 <option value="stretch">stretch</option>
                                 <option value="flex-start">flex-start</option>
                                 <option value="flex-end">flex-end</option>
@@ -133,7 +134,6 @@
 
                 <div id="itensContainer">
                     <span id="spanTitleContent">content</span>
-                    <span>select the block you want to change</span>
                     <div class="items">
 
                         <div id="orderContainer">
@@ -165,13 +165,13 @@
                                 valor pode ser definido em pixels, porcentagem ou outras unidades de medida.">flex-basis</span>
                             <input id="flexBasis" name="flexBasis" placeholder="flex basis">
                         </div>
-                        <div id="flexContainer">
+                        <!-- <div id="flexContainer">
                             <span class="flexItemText" data-tooltip=" é usada para definir as propriedades flex-grow, flex-shrink e flex-basis em uma única
                                 declaração.
                                 Ela é uma propriedade abreviada que combina essas três propriedades relacionadas a itens
                                 flexíveis">flex</span>
                             <input id="flex" name="flex" placeholder="flex">
-                        </div>
+                        </div> -->
                         <div id="alignSelfContainer">
                             <span class="flexItemText" data-tooltip="é usada em itens flexíveis para controlar o alinhamento vertical individual de um item
                                 dentro de um contêiner flexível.
@@ -191,6 +191,7 @@
                             </select>
                         </div>
                     </div>
+                    <span>select the block you want to change</span>
                     <button id="setContent">set</button>
                 </div>
             </div>

@@ -5,10 +5,12 @@
     min-height: 100vh;
     height: auto;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
-#spanTitleContainer, #spanTitleContent{
+#spanTitleContainer,
+#spanTitleContent {
     color: var(--five-color);
 }
 
@@ -19,7 +21,7 @@
     margin-top: 10px;
 }
 
-#itensContainer{
+#itensContainer {
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -29,54 +31,54 @@
     color: var(--four-color);
 }
 
-.flexItemText{
+.flexItemText {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.flexItemText[data-tooltip]{
+.flexItemText[data-tooltip] {
     position: relative;
     z-index: 11;
     cursor: pointer;
 }
 
-.flexItemText[data-tooltip]:before{
-  visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  pointer-events: none;
+.flexItemText[data-tooltip]:before {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Position tooltip above the element */
 .flexItemText[data-tooltip]:before {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  margin-bottom: 5px;
-  margin-left: -80px;
-  padding: 7px;
-  width: 160px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
-  content: attr(data-tooltip);
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 /* Show tooltip content on hover */
 .flexItemText[data-tooltip]:hover:before,
 .flexItemText[data-tooltip]:hover:after {
-  visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
 }
 
 #flexboxPropertiesEdit input {
@@ -101,7 +103,7 @@
 #flexGrowContainer,
 #flexShrinkContainer,
 #flexBasisContainer,
-#flexContainer,
+/* #flexContainer, */
 #alignSelfContainer {
     display: flex;
     flex-direction: column;
@@ -111,7 +113,7 @@
     background-color: var(--three-color);
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +142,8 @@
     gap: 10px;
 }
 
-#copyButton, #setContent {
+#copyButton,
+#setContent {
     background-color: var(--five-color);
     border: none;
     font-weight: 600;
@@ -150,7 +153,30 @@
     transition: 200ms;
 }
 
-#codeBox{
+#addDivBlock {
+    width: 200px;
+    height: 15px;
+    background-color: var(--three-color);
+    -webkit-appearance: none;
+    border-radius: 50px;
+    box-shadow: rgb(0, 166, 252555) 3px 6px 8px -6px, rgba(220, 220, 220, 0.1) 0px 3px 3px -3px;
+    overflow: hidden;
+}
+
+#addDivBlock::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: linear-gradient(130deg, #ffffff, #bbbbbb);
+    border: 0.5px solid #E3E3E3;
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px var(--five-color);
+
+}
+
+
+#codeBox {
     border: 1px solid var(--five-color);
     width: 280px;
     min-height: 40px;
@@ -158,7 +184,8 @@
     color: var(--five-color);
 }
 
-#generateButton:hover, #setContent:hover{
+#copyButton:hover,
+#setContent:hover {
     background-color: var(--six-color);
 }
 
@@ -177,11 +204,11 @@
 #divBlockTwo:hover,
 #divBlockThree:hover,
 #divBlockFour:hover,
-#divBlockFive:hover{
+#divBlockFive:hover {
     opacity: 0.7;
 }
 
-#question{
+#question {
     font-size: 1rem;
 }
 
@@ -212,8 +239,8 @@
 
 
 @media screen and (max-width: 350px) {
-    #flexboxPropertiesEdit{
+    #flexboxPropertiesEdit {
         flex-direction: column;
     }
-    
+
 }

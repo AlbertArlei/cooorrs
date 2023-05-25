@@ -17,12 +17,10 @@
         <div class="servicesContainer">
             <a class="serviceLinkContainer" href="/border"><span >border generator</span></a>
             <a class="serviceLinkContainer" href="/flexbox"><span >flexbox</span></a>
+            <a class="serviceLinkContainer" href="/login"><span >login</span></a>
         </div>
         
         <?php include_once('./src/include/footer.php');?>
     </div>
 </body>
-
 </html>
-
-<p>eita</p>

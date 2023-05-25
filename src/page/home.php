@@ -17,7 +17,4 @@
         <?php include_once('./src/include/footer.php'); ?>
     </div>
 </body>
-
 </html>
-
-<p>eita</p>
