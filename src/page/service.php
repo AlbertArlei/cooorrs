@@ -13,14 +13,17 @@
 
 <body>
     <div class="page">
-        <?php include_once('./src/include/navBar.php');?>
-        <div class="servicesContainer">
-            <a class="serviceLinkContainer" href="/border"><span >border generator</span></a>
-            <a class="serviceLinkContainer" href="/flexbox"><span >flexbox</span></a>
-            <a class="serviceLinkContainer" href="/login"><span >login</span></a>
-        </div>
-        
-        <?php include_once('./src/include/footer.php');?>
+        <?php include_once('./src/include/navBar.php'); ?>
+        <main>
+            <div class="servicesContainer">
+                <a class="serviceLinkContainer" href="/border"><span>border generator</span></a>
+                <a class="serviceLinkContainer" href="/flexbox"><span>flexbox</span></a>
+                <a class="serviceLinkContainer" href="/login"><span>login</span></a>
+            </div>
+        </main>
+
+        <?php include_once('./src/include/footer.php'); ?>
     </div>
 </body>
+
 </html>

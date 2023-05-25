@@ -13,8 +13,11 @@
 <body>
     <div class="page">
         <?php include_once('./src/include/navBar.php'); ?>
+        <main>
 
+        </main>
         <?php include_once('./src/include/footer.php'); ?>
     </div>
 </body>
+
 </html>
