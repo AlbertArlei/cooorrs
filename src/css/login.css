@@ -2,3 +2,72 @@
     width: 90%;
     margin: 0 auto;
 }
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#formContainerLogin{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--three-color);
+    color: var(--four-color);
+    width: 280px;
+    height: 350px;
+    gap: 30px;
+    border-radius: 5px;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inputContainer input{
+    background-color: var(--four-color);
+    border: none;
+    width: 250px;
+    height: 25px;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#formContainerLogin form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#loginTitle{
+    position: absolute;
+    top: 20px;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 5  00;
+}
+
+#loginBtn{
+    background-color: var(--five-color);
+    border: none;
+    width: 250px;
+    height: 25px;
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 5px;
+}
+
+#loginBtn:hover{
+    background-color: var(--six-color);
+}
+
+#noAccount{
+    cursor: pointer;
+}

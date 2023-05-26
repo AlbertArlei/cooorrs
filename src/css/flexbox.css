@@ -51,7 +51,6 @@
     pointer-events: none;
 }
 
-/* Position tooltip above the element */
 .flexItemText[data-tooltip]:before {
     position: absolute;
     bottom: 0px;
@@ -72,7 +71,6 @@
     line-height: 1.2;
 }
 
-/* Show tooltip content on hover */
 .flexItemText[data-tooltip]:hover:before,
 .flexItemText[data-tooltip]:hover:after {
     visibility: visible;
@@ -90,6 +88,28 @@
 #flexboxPropertiesEdit select {
     outline: none;
     border: none;
+    height: 20px;
+    background-color: var(--four-color);
+    color: var(--three-color);
+}
+
+#flexboxPropertiesEdit select:hover{
+    animation: 1s colorHover linear;
+}
+
+@keyframes colorHover{
+    0%{
+        color: var(--three-color);
+    }
+    10%{
+        color: var(--five-color);
+    }
+    80%{
+        color: var(--five-color);
+    }
+    100%{
+        color: var(--three-color);
+    }
 }
 
 #flexDirectionContainer,
@@ -111,6 +131,8 @@
     height: auto;
     padding: 10px;
     background-color: var(--three-color);
+    border-radius: 5px;
+    gap: 10px;
 }
 
 #container {
@@ -135,6 +157,7 @@
     height: 250px;
     padding: 10px;
     background: var(--three-color);
+    border-radius: 5px;
 }
 
 #controllerBox {
@@ -150,6 +173,7 @@
     width: 140px;
     height: 30px;
     cursor: pointer;
+    border-radius: 5px;
     transition: 200ms;
 }
 
@@ -157,14 +181,14 @@
     width: 200px;
     height: 15px;
     background-color: var(--three-color);
-    -webkit-appearance: none;
+    appearance: none;
     border-radius: 50px;
     box-shadow: rgb(0, 166, 252555) 3px 6px 8px -6px, rgba(220, 220, 220, 0.1) 0px 3px 3px -3px;
     overflow: hidden;
 }
 
 #addDivBlock::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -172,7 +196,6 @@
     border: 0.5px solid #E3E3E3;
     cursor: pointer;
     box-shadow: -407px 0 0 400px var(--five-color);
-
 }
 
 
