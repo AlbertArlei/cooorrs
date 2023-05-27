@@ -28,8 +28,8 @@ $router->addRoute('GET', '/login', function() {
     include('./src/service/login.php');
 });
 
-$router->addRoute('GET', '/con', function() {
-    include('./src/connect.php');
+$router->addRoute('POST', '/loginverification', function() {
+    include('./src/post/loginVerification.php');
 });
 
 $router->run($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);

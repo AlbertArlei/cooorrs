@@ -5,9 +5,11 @@
 main{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-#formContainerLogin{
+#formContainerLogin, #formCreateAccount{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -19,6 +21,10 @@ main{
     height: 350px;
     gap: 30px;
     border-radius: 5px;
+}
+
+#formCreateAccount{
+    display: none;
 }
 
 .inputContainer{
@@ -38,7 +44,7 @@ main{
     border-radius: 5px;
 }
 
-#formContainerLogin form{
+#formContainerLogin form, #formCreateAccount form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +52,7 @@ main{
     gap: 30px;
 }
 
-#loginTitle{
+.title{
     position: absolute;
     top: 20px;
     align-self: center;
@@ -54,7 +60,7 @@ main{
     font-weight: 5  00;
 }
 
-#loginBtn{
+#loginBtn, #createAccountBtn{
     background-color: var(--five-color);
     border: none;
     width: 250px;
@@ -68,6 +74,10 @@ main{
     background-color: var(--six-color);
 }
 
-#noAccount{
+#noAccount, #login{
     cursor: pointer;
+}
+
+#noAccount:hover, #login:hover{
+    text-decoration: underline;
 }

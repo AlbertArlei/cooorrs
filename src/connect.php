@@ -1,6 +1,6 @@
 <?php
 
-$host = "localhost:94";
+$host = "localhost";
 $userName = "root";
 $password = "";
 $dbName = "cooorrs";
@@ -8,6 +8,6 @@ $dbName = "cooorrs";
 $conn = new mysqli("$host", "$userName", "$password", "$dbName");
 
 if($conn->connect_error){
-    echo "erro";
+    die("erro" . $conn->connect_error);
 }
 echo "deu certo";

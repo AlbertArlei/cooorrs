@@ -17,8 +17,8 @@
 
         <main>
             <div id="formContainerLogin">
-                <span id="loginTitle">login</span>
-                <form action="/loginVerification">
+                <span class="title">login</span>
+                <form action="/loginverification" method="POST">
                     <div class="inputContainer">
                         <span>user</span>
                         <input type="text" name="user" placeholder="user" required>
@@ -27,9 +27,25 @@
                         <span>password</span>
                         <input type="password" name="password" placeholder="password" required>
                     </div>
-                    <input id="loginBtn" type="submit" value="login" >
+                    <input id="loginBtn" type="submit" value="login">
                 </form>
                 <span id="noAccount">don't have an account?</span>
+            </div>
+
+            <div id="formCreateAccount">
+                <span class="title">create an account</span>
+                <form action="/loginverification" method="POST">
+                    <div class="inputContainer">
+                        <span>user</span>
+                        <input type="text" name="user" placeholder="user">
+                    </div>
+                    <div class="inputContainer">
+                        <span>user</span>
+                        <input type="password" name="password" placeholder="password">
+                    </div>
+                    <input id="createAccountBtn" type="submit" value="sign up">
+                    <span id="login">sign in</span>
+                </form>
             </div>
         </main>
 
