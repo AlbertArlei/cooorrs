@@ -3,35 +3,60 @@
     margin: 0 auto;
 }
 main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#formContainerLogin, #formCreateAccount{
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#formsContainer{
+    position: relative;
+    width: 280px;
+    height: 400px;
+}
+
+#formLogin, #formCreateAccount{
+    display: flex;
     background-color: var(--three-color);
     color: var(--four-color);
     width: 280px;
-    height: 350px;
+    height: 400px;
+    flex-direction: column;
     gap: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
     border-radius: 5px;
+    position: absolute;
+}
+
+#formLogin{
+    transform: rotateY(180deg);
 }
 
 #formCreateAccount{
-    display: none;
+    backface-visibility: hidden;
 }
+
+.loginflip #formLogin{
+    transform: rotateY(360deg);
+}
+
+.loginflip #formCreateAccount{
+    transform: rotateY(180deg);
+}
+
+
 
 .inputContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    color: var(--four-color);
 }
 
 .inputContainer input{
@@ -44,20 +69,10 @@ main{
     border-radius: 5px;
 }
 
-#formContainerLogin form, #formCreateAccount form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
 .title{
-    position: absolute;
-    top: 20px;
     align-self: center;
     font-size: 1.5rem;
-    font-weight: 5  00;
+    font-weight: 500;
 }
 
 #loginBtn, #createAccountBtn{
@@ -70,14 +85,11 @@ main{
     border-radius: 5px;
 }
 
-#loginBtn:hover{
+#loginBtn:hover, #createAccountBtn:hover{
     background-color: var(--six-color);
-}
-
-#noAccount, #login{
-    cursor: pointer;
 }
 
 #noAccount:hover, #login:hover{
     text-decoration: underline;
+    cursor: pointer;
 }

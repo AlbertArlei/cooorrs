@@ -16,9 +16,9 @@
         <?php include_once('./src/include/navBar.php'); ?>
 
         <main>
-            <div id="formContainerLogin">
-                <span class="title">login</span>
-                <form action="/loginverification" method="POST">
+            <div id="formsContainer">
+                <form id="formLogin" action="/loginverification" method="POST">
+                    <span class="title">login</span>
                     <div class="inputContainer">
                         <span>user</span>
                         <input type="text" name="user" placeholder="user" required>
@@ -27,22 +27,26 @@
                         <span>password</span>
                         <input type="password" name="password" placeholder="password" required>
                     </div>
+                    <input type="hidden" name="login">
                     <input id="loginBtn" type="submit" value="login">
+                    <span id="noAccount">don't have an account?</span>
                 </form>
-                <span id="noAccount">don't have an account?</span>
-            </div>
 
-            <div id="formCreateAccount">
-                <span class="title">create an account</span>
-                <form action="/loginverification" method="POST">
+                <form id="formCreateAccount" action="/loginverification" method="POST">
+                    <span class="title">create an account</span>
+                    <div class="inputContainer">
+                        <span>name</span>
+                        <input type="text" name="name" placeholder="name">
+                    </div>
                     <div class="inputContainer">
                         <span>user</span>
                         <input type="text" name="user" placeholder="user">
                     </div>
                     <div class="inputContainer">
-                        <span>user</span>
+                        <span>password</span>
                         <input type="password" name="password" placeholder="password">
                     </div>
+                    <input type="hidden" name="create">
                     <input id="createAccountBtn" type="submit" value="sign up">
                     <span id="login">sign in</span>
                 </form>
@@ -51,6 +55,7 @@
 
         <?php include_once('./src/include/footer.php'); ?>
     </div>
+    <script src="./src/js/login.js"></script>
 </body>
 
 </html>
