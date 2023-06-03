@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,43 +15,19 @@
 <body>
     <div class="page">
         <?php include_once('./src/include/navBar.php'); ?>
-
+        
         <main>
-            <div id="formsContainer">
-                <form id="formLogin" action="/loginverification" method="POST">
-                    <span class="title">login</span>
-                    <div class="inputContainer">
-                        <span>user</span>
-                        <input type="text" name="user" placeholder="user" required>
-                    </div>
-                    <div class="inputContainer">
-                        <span>password</span>
-                        <input type="password" name="password" placeholder="password" required>
-                    </div>
-                    <input type="hidden" name="login">
-                    <input id="loginBtn" type="submit" value="login">
-                    <span id="noAccount">don't have an account?</span>
-                </form>
+            <?php if (isset($_SESSION['login']) === true) {
+                if ($_SESSION['login'] === true) {
+                    include_once('./src/include/loginUpdateInclude.php');
+                    
+                } else {
+                    include_once('./src/include/loginFormInclude.php');
+                }
+            } else {
+                include_once('./src/include/loginFormInclude.php');
+            }?>
 
-                <form id="formCreateAccount" action="/loginverification" method="POST">
-                    <span class="title">create an account</span>
-                    <div class="inputContainer">
-                        <span>name</span>
-                        <input type="text" name="name" placeholder="name">
-                    </div>
-                    <div class="inputContainer">
-                        <span>user</span>
-                        <input type="text" name="user" placeholder="user">
-                    </div>
-                    <div class="inputContainer">
-                        <span>password</span>
-                        <input type="password" name="password" placeholder="password">
-                    </div>
-                    <input type="hidden" name="create">
-                    <input id="createAccountBtn" type="submit" value="sign up">
-                    <span id="login">sign in</span>
-                </form>
-            </div>
         </main>
 
         <?php include_once('./src/include/footer.php'); ?>

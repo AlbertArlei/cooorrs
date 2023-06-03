@@ -12,18 +12,19 @@ main{
     height: 100vh;
 }
 
-#formsContainer{
+.formsContainer{
     position: relative;
     width: 280px;
-    height: 400px;
+    height: 544px;
+    min-height: 400px;
 }
 
-#formLogin, #formCreateAccount{
+#formLogin, #formCreateAccount, #formAlterData{
     display: flex;
     background-color: var(--three-color);
     color: var(--four-color);
     width: 280px;
-    height: 400px;
+    height: auto;
     flex-direction: column;
     gap: 30px;
     align-items: center;
@@ -73,9 +74,10 @@ main{
     align-self: center;
     font-size: 1.5rem;
     font-weight: 500;
+    margin-top: 20px;
 }
 
-#loginBtn, #createAccountBtn{
+#loginBtn, #createAccountBtn, #saveDataBtn{
     background-color: var(--five-color);
     border: none;
     width: 250px;
@@ -83,10 +85,14 @@ main{
     cursor: pointer;
     transition: 200ms;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-#loginBtn:hover, #createAccountBtn:hover{
+#loginBtn:hover, #createAccountBtn:hover, #saveDataBtn:hover{
     background-color: var(--six-color);
+}
+#noAccount, #login{
+    margin-bottom: 20px;
 }
 
 #noAccount:hover, #login:hover{

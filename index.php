@@ -33,7 +33,11 @@ $router->addRoute('GET', '/login', function() {
 // });
 
 $router->addRoute('POST', '/loginverification', function() {
-    include('./src/post/loginVerification.php');
+    include('./src/post/login.php');
+});
+
+$router->addRoute('POST', '/loginupdate', function() {
+    include('./src/post/loginUpdate.php');
 });
 
 $router->run($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
