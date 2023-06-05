@@ -11,7 +11,7 @@
 
 #spanTitleContainer,
 #spanTitleContent {
-    color: var(--five-color);
+    color: var(--three-color);
 }
 
 #flexboxPropertiesEdit {
@@ -112,6 +112,10 @@
     }
 }
 
+#blockChange{
+    color: var(--three-color);
+}
+
 #flexDirectionContainer,
 #flexWrapContainer,
 #flexFlowContainer,
@@ -168,6 +172,7 @@
 #copyButton,
 #setContent {
     background-color: var(--five-color);
+    color: var(--four-color);
     border: none;
     font-weight: 600;
     width: 140px;

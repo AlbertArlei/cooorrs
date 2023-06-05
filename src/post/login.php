@@ -10,9 +10,10 @@ if (isset($_POST["create"])) {
     $user = mysqli_real_escape_string($conn, $_POST["user"]);
     $password = hash('sha512', $_POST["password"]);
 
-    $sql = mysqli_query($conn, "SELECT * FROM users WHERE user = '$user' AND password = '$password'");
+    $sql = mysqli_query($conn, "SELECT * FROM users WHERE user = '$user'"); // AND password = '$password'
 
     if ($sql->num_rows > 0) {
+        $_SESSION['loginMsg'] = '<div id="loginMsg"><span>username in use</span></div>';
         header('Location: /login');
 
     } else {
@@ -29,6 +30,7 @@ if (isset($_POST["login"])) {
         $data = mysqli_fetch_assoc($sql);
         $_SESSION['id'] = $data['id'];
         $_SESSION['login'] = $logged;
+        $_SESSION['loginMsg'] = '<div id="loginMsg"><span></span></div>';
         
         header('Location: /login');
     } else {

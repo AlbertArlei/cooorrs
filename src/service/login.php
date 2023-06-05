@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./src/css/global.css">
     <link rel="stylesheet" href="./src/css/navBar.css">
     <link rel="stylesheet" href="./src/css/login.css">
-    <title>Cooorrs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Cooorrs</title>
 </head>
 
 <body>

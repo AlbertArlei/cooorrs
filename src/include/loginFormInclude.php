@@ -13,7 +13,6 @@
         <input id="loginBtn" type="submit" value="login">
         <span id="noAccount">don't have an account?</span>
     </form>
-
     <form id="formCreateAccount" action="/loginverification" method="POST">
         <span class="title">create an account</span>
         <div class="inputContainer">
@@ -31,5 +30,12 @@
         <input type="hidden" name="create">
         <input id="createAccountBtn" type="submit" value="sign up">
         <span id="login">sign in</span>
+        <?php
+        if (isset($_SESSION['loginMsg'])) {
+            if($_SESSION['loginMsg'] != false){
+                echo $_SESSION['loginMsg'];
+            }
+        }
+        ?>
     </form>
 </div>

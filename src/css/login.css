@@ -17,6 +17,7 @@ main{
     width: 280px;
     height: 544px;
     min-height: 400px;
+    user-select: none;
 }
 
 #formLogin, #formCreateAccount, #formAlterData{
@@ -79,13 +80,13 @@ main{
 
 #loginBtn, #createAccountBtn, #saveDataBtn{
     background-color: var(--five-color);
+    color: var(--four-color);
     border: none;
     width: 250px;
     height: 25px;
     cursor: pointer;
     transition: 200ms;
     border-radius: 5px;
-    margin-bottom: 20px;
 }
 
 #loginBtn:hover, #createAccountBtn:hover, #saveDataBtn:hover{
@@ -98,4 +99,34 @@ main{
 #noAccount:hover, #login:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+#show{
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#show:hover{
+    color: var(--five-color);
+}
+
+.passwordContainer{
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.toggle{
+    display: flex;
+}
+
+#loginMsg{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 0, 0, 0.3);
+    border-radius: 5px;
+    color: rgb(195, 24, 24);
+    padding: 10px;
+    height: 30px;
+    margin-bottom: 10px;
 }
