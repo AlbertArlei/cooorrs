@@ -2,23 +2,25 @@
 include_once('./src/connect.php');
 session_start();
 $logged = false;
-$user = $_POST["user"];
-$password = hash('sha512', $_POST["password"]);
+$jsonPayload = file_get_contents('php://input');
+$create = json_decode($jsonPayload);
 
-if (isset($_POST["create"])) {
-    $name = mysqli_real_escape_string($conn, $_POST["name"]);
-    $user = mysqli_real_escape_string($conn, $_POST["user"]);
-    $password = hash('sha512', $_POST["password"]);
+if (isset($create->create)) {
+    $name = mysqli_real_escape_string($conn, $create->name);
+    $user = mysqli_real_escape_string($conn, $create->user);
+    $password = hash('sha512', $create->password);
 
     $sql = mysqli_query($conn, "SELECT * FROM users WHERE user = '$user'"); // AND password = '$password'
 
     if ($sql->num_rows > 0) {
-        $_SESSION['loginMsg'] = '<div id="loginMsg"><span>username in use</span></div>';
-        header('Location: /login');
-
+        http_response_code(409);
+        $message = ['message' => 'username in use'];
+        header('Content-Type: application/json');
+        echo json_encode($message);
+        
     } else {
         $sql = mysqli_query($conn, "INSERT INTO users (name, user, password) VALUES ('$name', '$user', '$password')");
-        header('Location: /login');
+        http_response_code(201);
     }
 }
 
@@ -38,6 +40,7 @@ if (isset($_POST["login"])) {
         echo '0';
         $_SESSION['login'] = $logged;
         header('Location: /login');
+        
     }
 
 }

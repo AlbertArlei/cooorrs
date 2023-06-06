@@ -39,6 +39,7 @@ $data = mysqli_fetch_assoc($sql);
         <?php
               if($_SESSION['loginMsg'] != false){
                 echo $_SESSION['loginMsg'];
+                $_SESSION['loginMsg'] = false;
             }
             ?>
     </form>

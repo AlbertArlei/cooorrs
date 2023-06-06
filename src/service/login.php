@@ -33,7 +33,8 @@
 
         <?php include_once('./src/include/footer.php'); ?>
     </div>
+    <?php echo'rola=>' . $_SESSION['a'];?>
     <script src="./src/js/login.js"></script>
+    <script src="./src/js/loginFetch.js"></script>
 </body>
-
 </html>

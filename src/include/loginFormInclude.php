@@ -17,25 +17,29 @@
         <span class="title">create an account</span>
         <div class="inputContainer">
             <span>name</span>
-            <input type="text" name="name" placeholder="name" required autocomplete="off">
+            <input id="inputNameCreate" type="text" name="name" placeholder="name" required autocomplete="off">
         </div>
         <div class="inputContainer">
             <span>user</span>
-            <input type="text" name="user" placeholder="user" required autocomplete="off">
+            <input type="text" id="inputUserCreate" name="user" placeholder="user" required autocomplete="off">
         </div>
         <div class="inputContainer">
             <span>password</span>
-            <input type="password" name="password" placeholder="password" required autocomplete="off">
+            <input type="password" id="inputPasswordCreate" name="password" placeholder="password" required autocomplete="off">
         </div>
         <input type="hidden" name="create">
+
         <input id="createAccountBtn" type="submit" value="sign up">
         <span id="login">sign in</span>
+
         <?php
         if (isset($_SESSION['loginMsg'])) {
             if($_SESSION['loginMsg'] != false){
                 echo $_SESSION['loginMsg'];
+                $_SESSION['loginMsg'] = false;
             }
         }
         ?>
+
     </form>
 </div>
